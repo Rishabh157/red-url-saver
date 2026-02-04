@@ -1,0 +1,183 @@
+/* Color Palette: Red Theme */
+:root {
+    --primary-red: #D32F2F;
+    --dark-red: #B71C1C;
+    --light-red: #FFCDD2;
+    --bg-red: #FFEBEE;
+    --text-color: #333;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    width: 320px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-red);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+/* Header with Gradient */
+header {
+    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+    color: var(--white);
+    padding: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+main {
+    padding: 15px;
+}
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    color: var(--dark-red);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--light-red);
+    border-radius: 6px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't overflow width */
+    font-family: inherit;
+    font-size: 13px;
+    transition: border 0.3s;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
+}
+
+input[readonly] {
+    background-color: #f9f9f9;
+    color: #666;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    box-shadow: var(--shadow);
+}
+
+button:hover {
+    background-color: var(--dark-red);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* List Styles */
+.divider {
+    margin: 20px 0 10px;
+    border-bottom: 2px solid var(--light-red);
+    text-align: center;
+    height: 10px;
+}
+
+.divider span {
+    background-color: var(--bg-red);
+    padding: 0 10px;
+    color: var(--primary-red);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.saved-item {
+    background: var(--white);
+    border-left: 5px solid var(--primary-red);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+li.saved-item a {
+    color: var(--dark-red);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+li.saved-item p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+    background: #f4f4f4;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    align-self: flex-end;
+    background: none;
+    color: #999;
+    border: none;
+    font-size: 11px;
+    padding: 4px;
+    width: auto;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.delete-btn:hover {
+    color: var(--primary-red);
+    background: none;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    padding: 20px 0;
+}

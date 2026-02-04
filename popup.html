@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red URL Saver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Red URL Saver</h1>
+    </header>
+
+    <main>
+        <div class="input-group">
+            <label for="current-url">Current URL</label>
+            <input type="text" id="current-url" readonly>
+        </div>
+
+        <div class="input-group">
+            <label for="remark">Remark / Note</label>
+            <textarea id="remark" placeholder="Enter a remark here..."></textarea>
+        </div>
+
+        <button id="save-btn">Save Bookmark</button>
+
+        <div class="divider">
+            <span>Saved Links</span>
+        </div>
+
+        <ul id="saved-list">
+            <li class="empty-state">No saved links yet.</li>
+        </ul>
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
